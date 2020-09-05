@@ -5,6 +5,7 @@ import com.blade.graph.Digraph;
 import com.blade.graph.storage.ListDigraph;
 import com.blade.graph.storage.MatrixDigraph;
 import com.blade.graph.storage.SetDigraph;
+import org.junit.Test;
 
 public class TestDigraph {
 
@@ -20,7 +21,8 @@ public class TestDigraph {
         g.addEdge(4, 3);
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         Digraph g = new ListDigraph(6);
         add(g);

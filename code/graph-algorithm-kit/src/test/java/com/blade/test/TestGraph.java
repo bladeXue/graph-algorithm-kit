@@ -3,6 +3,7 @@ package com.blade.test;
 
 import com.blade.graph.Graph;
 import com.blade.graph.storage.ListGraph;
+import org.junit.Test;
 
 public class TestGraph {
 
@@ -18,11 +19,11 @@ public class TestGraph {
         g.addEdge(3, 3);    // 陷阱2
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
 
         Graph g = new ListGraph(5);
         add(g);
         System.out.println(g.toString());
-
     }
 }
