@@ -41,10 +41,10 @@ public abstract class Graphs {
 
     public static List<Integer[]> breadthFirstTraverse(Graph graph, Integer src) {
 
-        validateVertex(src,graph);
+        validateVertex(src, graph);
 
         List<Integer[]> results = new ArrayList<>();
-        List<Integer> marked=new ArrayList<>(graph.V());
+        List<Integer> marked = new ArrayList<>(graph.V());
 
         int first = Objects.requireNonNullElse(src, 0);
 
@@ -71,7 +71,7 @@ public abstract class Graphs {
         queue.add(src);
 
         while (!queue.isEmpty()) {
-            for (Integer i:graph.adj(queue.poll())) {
+            for (Integer i : graph.adj(queue.poll())) {
                 if (!marked.contains(i)) {
                     marked.add(i);
                     queue.add(i);
